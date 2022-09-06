@@ -1,3 +1,41 @@
+// Creamos primero la clase constructora para crear objetos de nuestros productos y añadir
+// sus especificaiones de forma dinamica.
+
+class Productos{
+    constructor(info){
+        this.modelo = info.modelo;
+        this.año = info.año;
+        this.precio = info.precio;
+        this.cantidad = info.cantidad;
+        this.vendido = false;
+    }
+    vender(){
+        this.cantidad = this.cantidad - 1;
+        this.vendido = true;
+
+    }
+} 
+
+
+// Incorporamos un nuevo objeto que seria un modelo especifico de Auto
+
+let car1 = new Productos({
+    modelo: "Reno",
+    año: 2005,
+    precio: 15000,
+    cantidad: 5,
+})
+
+
+
+// Verificamos la el metodo vender dentro del Objeto
+
+console.log(car1);
+car1.vender();
+car1.vender();
+
+
+
 
 // Creamos un Array del Producto Auto vacio, y con un ciclo for para hacerlo mas dinamico
 // creamos un objeto con los items que tiene cada Auto, a partir de los datos ingresado. 
@@ -17,16 +55,17 @@ for(i = 0; i < 3; i++){
     auto.push(autos);
 }
 
-
+// Mostramos el array creado con los datos ingresados.
+console.log(auto);
 
  // Utilizamos el metodo index of para buscar entre los productos
 
 let buscar = prompt("Ingrese el Marca del Auto que desea Buscar !");
 let encontrado = auto.includes(`${buscar}`);
 if(encontrado == false){
-    prompt("No se encontro");
+     alert("No se encontro");
 }else{
-    prompt("Si existe");
+    alert("Encontrado");
 }
 
 
