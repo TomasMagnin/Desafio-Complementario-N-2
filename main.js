@@ -33,8 +33,7 @@ let car1 = new Productos({
 console.log(car1);
 car1.vender();
 car1.vender();
-
-
+console.log(car1);
 
 
 // Creamos un Array del Producto Auto vacio, y con un ciclo for para hacerlo mas dinamico
